@@ -17,18 +17,37 @@
     padding-bottom: 4rem;
 }
 
+/* Navbar avant le scroll */
+.navbar.navbar-dark .nav-link {
+    color: #ffffff; /* blanc pur */
+}
+
 /* display background dark color on navbar scroll */
 .navbarScroll.navbarDark {
     background-color: #5b5b5b;
 }
 
+/* Liens presque blancs */
+.navbarScroll.navbarDark .nav-link {
+    color: #f8f9fa; /* texte très clair */
+    transition: color 0.3s ease;
+}
+
 /* hero background image */
 .bgimage {
+    position: relative;
     height: 100vh;
     max-height: 900px;
-    background: url("images/image1.jpg");
-    background-size: cover;
-    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 /* text css above hero image*/
 .hero_title {
@@ -37,18 +56,24 @@
 .hero_desc {
     font-size: 2rem;
 }
+
 .hero-text {
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #ffffff;
+
+    /* AJOUT accessibilité */
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 2rem;
+    border-radius: 8px;
 }
 
 /* about */
 .imageAboutPage {
-    width: 100%;
+    width: 60%;
 }
 .imageAboutPage {
     border-radius: 50%;
@@ -77,16 +102,36 @@
     text-align: center;
 }
 .card:hover .skillsIcon {
-    color: #008000;
+    color: #e24192;
 }
 .skillsText:hover {
-    border: 1px solid #008000;
+    border: 1px solid #e24192;
 }
 
 /* portfolio */
+#portfolio .card {
+    min-height: 350px; /* ajuste selon la hauteur désirée */
+}
+
 #portfolio p {
     text-align: center;
 }
+
+.btn-success {
+    color: black;
+    background-color: #e24192;
+    border-color: #e24192;
+}
+
+.btn-success:hover {
+    background-color: #d3307a; 
+}
+
+/* Effet au survol */
+#portfolio .card:hover {
+    border: 2px solid #e24192; /* bordure rose au survol */
+}
+
 
 /* contact */
 .contactColumn {
@@ -95,7 +140,7 @@
     align-items: center;
 }
 .contactColumn i {
-    color: #198754;
+    color: #e24192;
 }
 
 /* footer */
