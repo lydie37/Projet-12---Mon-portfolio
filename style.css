@@ -17,6 +17,12 @@
     padding-bottom: 4rem;
 }
 
+/* Font Awesome : affichage immédiat des icônes */
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-display: swap;
+}
+
 /* Navbar avant le scroll */
 .navbar.navbar-dark .nav-link {
     color: #ffffff; /* blanc pur */
@@ -29,7 +35,7 @@
 
 /* Liens presque blancs */
 .navbarScroll.navbarDark .nav-link {
-    color: #f8f9fa; /* texte très clair */
+    color: #ffffff;
     transition: color 0.3s ease;
 }
 
@@ -73,7 +79,7 @@
 
 /* about */
 .imageAboutPage {
-    width: 60%;
+    width: 70%;
 }
 .imageAboutPage {
     border-radius: 50%;
@@ -144,3 +150,93 @@
 }
 
 /* footer */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Image de profil centrée et proportionnelle */
+    .imageAboutPage {
+        width: 60%;          /* proportionnelle au conteneur */
+        max-width: 250px;    /* limite la largeur */
+        height: auto;        /* conserve les proportions */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;  /* centre horizontalement */
+    }
+
+    /* Cartes compétences */
+    .skillsText.card {
+        min-height: 400px;
+        padding: 1rem;
+    }
+
+    .skillsText img {
+        height: 120px;
+        object-fit: contain;
+    }
+
+    /* Ligne de cartes Portfolio */
+    #portfolio .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;           /* espace entre cartes */
+    }
+
+    /* Cartes Portfolio */
+    .portfolioContent.card {
+        flex: 1 1 calc(33.333% - 1rem); /* 3 cartes par ligne */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolioContent.card .card-body {
+        flex-grow: 1;                /* hauteur uniforme */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* bouton en bas */
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .imageAboutPage {
+        width: auto;           
+        max-width: 100%;       
+        height: auto;          
+        display: block;
+        margin-left: auto;
+        margin-right: auto;    
+    }
+
+    .skillsText.card {
+        min-height: 400px; 
+        padding: 1rem;
+    }
+
+    .skillsText img {
+        height: 120px;     
+        object-fit: contain;
+    }
+
+    /* Ligne de cartes Portfolio */
+    #portfolio .row {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 450px;
+    }
+
+.card-body {
+    padding: 0;
+}
+}
+
+@media (max-width: 767px) {
+    .imageAboutPage {
+        width: 80%;       /* plus large sur écrans moyens */
+        max-width: 300px; /* limite la taille maximale */
+        height: auto;     
+        display: block;  
+        margin-left: auto;
+        margin-right: auto; 
+    }
+}
