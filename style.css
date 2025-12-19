@@ -151,92 +151,124 @@
 
 /* footer */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/* =========================
+   TABLETTE
+   ========================= */
+@media screen and (max-width: 1024px) {
 
-    /* Image de profil centrée et proportionnelle */
-    .imageAboutPage {
-        width: 60%;          /* proportionnelle au conteneur */
-        max-width: 250px;    /* limite la largeur */
-        height: auto;        /* conserve les proportions */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;  /* centre horizontalement */
+    .hero_title {
+        font-size: 3rem;
     }
 
-    /* Cartes compétences */
+    .hero_desc {
+        font-size: 1.5rem;
+    }
+
+    .imageAboutPage {
+        width: 70%;
+        max-width: 300px;
+        height: auto;          /* empêche l’écrasement */
+        aspect-ratio: 1 / 1;  /* conserve le format */
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+
     .skillsText.card {
         min-height: 400px;
-        padding: 1rem;
+        padding:  1rem;
     }
 
-    .skillsText img {
-        height: 120px;
-        object-fit: contain;
-    }
-
-    /* Ligne de cartes Portfolio */
-    #portfolio .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;           /* espace entre cartes */
-    }
-
-    /* Cartes Portfolio */
-    .portfolioContent.card {
-        flex: 1 1 calc(33.333% - 1rem); /* 3 cartes par ligne */
+    #portfolio .card {
+        min-height: 450px;
+        margin-bottom: 2rem;
         display: flex;
         flex-direction: column;
     }
 
-    .portfolioContent.card .card-body {
-        flex-grow: 1;                /* hauteur uniforme */
+     #portfolio .card-body {
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* bouton en bas */
-        padding: 1rem;
+        flex: 1;
+    }
+
+        /* Bouton en bas */
+    #portfolio .card-body .text-center {
+        margin-top: auto;
+    }
+
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media screen and (max-width: 767px) {
+
+    .hero_title {
+        font-size: 2.2rem;
+    }
+
+    .hero_desc {
+        font-size: 1.2rem;
+    }
+
+    .bgimage {
+        position: relative;
+        height: auto;
+        min-height: 220px;
+    }
+
+    .hero-bg {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* image entière visible */
+        display: block;
+        z-index: -1;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.55);
+        padding: 0.8rem 1.5rem; /* encore moins de padding sur mobile */
+        border-radius: 8px;
+        max-width: 90%;
+        text-align: center;
         box-sizing: border-box;
     }
-}
 
-@media (min-width: 768px) and (max-width: 1024px) {
     .imageAboutPage {
-        width: auto;           
-        max-width: 100%;       
-        height: auto;          
+        width: 80%;
+        height: auto;
         display: block;
-        margin-left: auto;
-        margin-right: auto;    
+        margin: 0 auto 2rem;
     }
 
-    .skillsText.card {
-        min-height: 400px; 
-        padding: 1rem;
+    #about,
+    #skills,
+    #portfolio,
+    #contact {
+        margin-top: 2rem;
+        padding-top: 2rem;
     }
 
-    .skillsText img {
-        height: 120px;     
-        object-fit: contain;
+    #about h2,
+    #skills h2,
+    #portfolio h2,
+    #contact h2 {
+        margin-bottom: 2rem;
     }
 
-    /* Ligne de cartes Portfolio */
-    #portfolio .row {
-        display: flex;
-        flex-wrap: wrap;
-        min-height: 450px;
+    .contactColumn {
+        margin-bottom: 2rem;
     }
 
-.card-body {
-    padding: 0;
-}
 }
 
-@media (max-width: 767px) {
-    .imageAboutPage {
-        width: 80%;       /* plus large sur écrans moyens */
-        max-width: 300px; /* limite la taille maximale */
-        height: auto;     
-        display: block;  
-        margin-left: auto;
-        margin-right: auto; 
-    }
-}
+
+
