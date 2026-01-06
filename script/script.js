@@ -23,7 +23,7 @@ function handleNavbarCollapse() {
   });
 }
 
-// Function to dynamically create HTML elements from the JSON file
+// Function to dynamically create HTML elements from the JSON file Skills
 function createSkillsFromJSON() {
   const container = document.querySelector("#skills .container");
   let row = document.createElement("div");
@@ -55,7 +55,7 @@ function createSkillsFromJSON() {
     });
 }
 
-// Function to dynamically create HTML elements from the JSON file
+// Function to dynamically create HTML elements from the JSON file Portfolio
 function createPortfolioFromJSON() {
   const container = document.querySelector("#portfolio .container");
   let row = document.createElement("div");

@@ -7,12 +7,14 @@
   margin-top: 4rem;
   padding-top: 4rem;
 }
+
 #about h2,
 #skills h2,
 #portfolio h2,
 #contact h2 {
   margin-bottom: 3rem;
 }
+
 #contact {
   padding-bottom: 4rem;
 }
@@ -69,6 +71,7 @@
 .hero_title {
   font-size: 4.5rem;
 }
+
 .hero_desc {
   font-size: 2rem;
 }
@@ -91,6 +94,7 @@
 .imageAboutPage {
   width: 70%;
 }
+
 .imageAboutPage {
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -101,25 +105,31 @@
   height: 350px;
   cursor: pointer;
 }
+
 .skillsText img {
   width: 100%;
   height: 150px;
   object-fit: contain;
 }
+
 #skills p {
   text-align: center;
 }
+
 .skillsIcon {
   font-size: 36px;
   text-align: center;
   width: 100%;
 }
+
 .card-title {
   text-align: center;
 }
+
 .card:hover .skillsIcon {
   color: #e24192;
 }
+
 .skillsText:hover {
   border: 1px solid #e24192;
 }
@@ -241,7 +251,6 @@
   }
 
   .imageAboutPage {
-    width: 80%;
     height: auto;
     display: block;
     margin: 0 auto 2rem;
